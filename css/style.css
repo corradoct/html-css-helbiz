@@ -9,7 +9,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
 }
 
 .clearfix {
@@ -17,37 +16,46 @@ a {
   display: table;
   clear: both;
 }
+
+.fa-bars,
+.fa-language {
+  color: #3d3d3d;
+}
 /* FINE REGOLE GENERALI */
 
 /* REGOLE HEADER */
 
 /* Regole generali */
 
-header .container {
-  line-height: 5em;
-  font-size: .7em;
+header .navbar {
+  padding: 1% 0;
 }
 
-header .container ul li {
+header .navbar .container {
+  line-height: .7em;
+  margin: 0 auto;
+}
+
+header .navbar .container ul li {
   display: inline-block;
 }
 
-header .container ul li a {
+header .navbar .container ul li a {
   color: #000;
   text-transform: uppercase;
   color: #3d3d3d;
+  font-size: .7em;
 }
 
 /* Fine regole generali */
 
 /* Regole logo */
 
-header .container .logo {
-  text-align: center;
+header .navbar .container .logo {
+  max-width: 100%;
 }
 
-header .container .logo img {
-  max-width: 85px;
+header .navbar .container .logo img {
   vertical-align: middle;
 }
 
@@ -55,28 +63,28 @@ header .container .logo img {
 
 /* Regole navbar */
 
-header .container nav ul li {
-  padding-left: 2.5em;
+header .navbar .container nav ul li {
+  padding-left: 5%;
 }
 
-header .container nav ul li:last-child {
-  margin-right: 1em;
+header .navbar .container nav ul li:last-child {
+  margin-right: 2%;
 }
 
-header .container nav,
-header .container .languages {
+header .navbar .container nav,
+header .navbar .container .languages {
   text-align: right;
 }
 
 /* Fine regole navbar */
 
 /* Regole lingue */
-header .container .languages ul li span {
+header .navbar .container .languages ul li {
   border-right: 1px solid #3d3d3d;
-  padding: 0 .6em;
+  padding: 0 4px;
 }
 
-header .container .languages ul li span.no-border {
+header .navbar .container .languages ul li:last-child {
   border-right: 0;
   padding-right: 0;
 }
@@ -133,6 +141,207 @@ header .jumbotron .teaser .store .google {
 
 /* REGOLE MAIN */
 
+/* Inizio regole prodotti */
+
+section.wrapper-items .container {
+  padding: 2% 4%;
+}
+
+section.wrapper-items .container .items .item {
+  width: calc(50% - 20px);
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+section.wrapper-items .container .items .item:first-child {
+  margin-right: 20px;
+}
+
+section.wrapper-items .container .items .item .item-text {
+  text-align: center;
+  padding-top: 40px;
+  letter-spacing: 1px;
+}
+
+section.wrapper-items .container .items .item .item-text p {
+  padding: 30px 0;
+  font-weight: bold;
+}
+
+section.wrapper-items .container .items .item .item-text a {
+  color: blue;
+}
+
+section.wrapper-items .container .items .item .item-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #fafafa;
+
+}
+/* Fine regole prodotti */
+
+/* Inizio regole how work */
+
+section.how-work {
+  background-image: url('../img/HelbizBanner.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%
+  height: 702px;
+}
+
+section.how-work .container .title,
+section.how-work .container .step {
+  padding: 40% 1% 0 1%;
+}
+
+section.how-work .container .step h4 {
+  padding: 3% 0;
+}
+
+section.how-work .container .step p {
+  font-size: .7em;
+}
+
+section.how-work .container .image {
+  padding-top: 5%;
+}
+
+section.how-work .container .image img {
+  max-width: 100%;
+}
+
+/* Fine regole how work */
+
+/* Inizio regole info */
+
+section.info {
+  padding: 0 4%;
+}
+
+section.info .container {
+  background-image: url('../img/ScooterHelbiz-2400.jpg');
+  height: 398px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+section.info .container .info-teaser {
+  width: 50%;
+  color: #fff;
+  text-align: center;
+  padding: 0 10%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  font-weight: bold;
+}
+
+section.info .container .info-teaser h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+section.info .container .info-teaser p {
+  padding: 5% 0;
+}
+
+section.info .container .info-teaser a {
+  color: #fff;
+}
+
+/* Fine regole info */
+
+/* Inizio regole app e find */
+
+section.app-find .container {
+  padding: 2% 4%;
+}
+
+section.app-find .container .app-find .app,
+section.app-find .container .app-find .find {
+  width: calc(50% - 10px);
+  text-align: center;
+  color: #fff;
+  height: 398px;
+}
+
+section.app-find .container .app-find .app {
+background: linear-gradient(#41566a,#252f38) 50% no-repeat;
+position: relative;
+overflow: hidden;
+}
+
+section.app-find .container .app-find h2,
+section.app-find .container .app-find p {
+  padding: 2% 0;
+}
+
+section.app-find .container .app-find a {
+  color: #fff;
+  padding: 0 1%;
+}
+
+section.app-find .container .app-find .app img {
+  width: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.app-find .container .app-find .app:first-child {
+  margin-right: 20px;
+}
+
+section.app-find .container .app-find .find {
+  background-image: url('../img/Cities-1500.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Fine regole app e find */
+
+/* Inizio regole sezione social */
+
+section.social .container {
+  background-image: url('../img/Social-Banner.jpg');
+  height: 265px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+section.social .container .social-link {
+  background: #fff;
+  width: 35%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3% 5%;
+  text-align: center;
+}
+
+section.social .container .social-link ul li {
+  display: inline-block;
+  font-size: 1.5em;
+  padding-right: 7%;
+}
+
+section.social .container .social-link ul li:last-child {
+  padding-right: 0;
+}
+
+section.social .container .social-link ul li a {
+  color: #000;
+}
+/* Fine regole sezione social */
+
 /* FINE REGOLE MAIN */
 
 /* REGOLE FOOTER */
@@ -141,16 +350,185 @@ header .jumbotron .teaser .store .google {
 
 /* MEDIAQUERYS */
 
-/* @media all and (max-width: 768px){
+@media all and (max-width: 768px){
+
+  header .navbar .container .logo {
+    text-align: center;
+  }
+
+  header .navbar .container nav .burger-menu,
+  header .navbar .container .languages .xs-languages {
+    display: block;
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  header .jumbotron {
+    background-position: bottom;
+    height: 200px;
+    font-size: .7em;
+  }
+
+  header .jumbotron .teaser .store .apple,
+  header .jumbotron .teaser .store .google {
+    width: 100%;
+  }
+
+  header .jumbotron .teaser a img {
+    width: 30%;
+  }
+
+  section.wrapper-items .container .items .item {
+    width: 100%;
+    font-size: .7em;
+  }
+
+  section.wrapper-items .container .items .item:first-child {
+    margin-bottom: 20px;
+  }
+
+  section.wrapper-items .container .items .item .item-image img {
+    height: auto;
+    width: 30%;
+  }
+
+  section.how-work {
+    margin-bottom: 1%;
+  }
+
+  section.how-work .container .title,
+  section.how-work .container .step {
+    width: 100%;
+    padding: 4% 0 0 0;
+    text-align: center;
+  }
+
+  section.how-work .container .title h2 {
+    font-size: 1em;
+  }
+
+  section.how-work .container .step h4 {
+    padding: 0;
+    font-size: .9em;
+  }
+
+  section.how-work .container .step p {
+    padding-bottom: 10%;
+  }
+
+  section.info .container {
+    background-position: left;
+  }
+
+  section.info .container .info-teaser  {
+    font-size: .8em;
+    padding: 0;
+    top: 85%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: #000;
+  }
+
+  section.info .container .info-teaser h2 {
+    font-size: 1.5em;
+  }
+
+  section.info .container .info-teaser p {
+    padding: 0;
+  }
+
+  section.app-find .container .app-find .app,
+  section.app-find .container .app-find .find {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: .8em;
+  }
+
+  section.social .container .social-link {
+    display: inline-block;
+  }
 
 }
 
 @media all and (min-width: 769px) and (max-width: 991px) {
 
+  header .navbar .container .logo,
+  header .navbar .container .languages {
+    text-align: center;
+  }
+
+  header .navbar .container nav .burger-menu {
+    display: block;
+    font-size: 1.4em;
+    text-align: center;
+  }
+
+  header .jumbotron {
+    background-position: bottom;
+    height: 300px;
+  }
+
+  header .jumbotron .teaser .store .apple img,
+  header .jumbotron .teaser .store .google img {
+    width: 70%;
+  }
+
+  section.wrapper-items .container .items .item {
+    max-width: 50%;
+  }
+
+  section.wrapper-items .container .items .item .item-text {
+    font-size: .7em;
+  }
+
+  section.how-work .container .image {
+    padding-top: 8%;
+    text-align: center;
+  }
+
+  section.how-work .container .title,
+  section.how-work .container .step {
+    padding: 30% 0 0 0;
+    font-size: .8em;
+  }
+
+  section.how-work .container .image img {
+    width: 60%;
+  }
+
+  section.info .container {
+    height: 200px;
+  }
+
+  section.info .container .info-teaser {
+    width: 30%;
+    padding: 0 2%;
+    font-size: .7em;
+  }
+
+  section.app-find .container .app-find .app,
+  section.app-find .container .app-find .find {
+    height: 200px;
+    font-size: .7em;
+  }
+
+  section.app-find .container .app-find .app img {
+    top: 90%;
+  }
+
+  section.social .container {
+    height: 200px;
+  }
+
+  section.social .container .social-link {
+    width: 20%;
+    padding: 1%;
+    font-size: .7em;
+  }
 }
 
 @media all and (min-width: 992px) {
 
-} */
+}
 
 /* FINE MEDIAQUERYS */
