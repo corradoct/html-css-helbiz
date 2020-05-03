@@ -28,7 +28,12 @@ a {
 /* Regole generali */
 
 header .navbar {
+  background: #fff;
   padding: 1% 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 100;
 }
 
 header .navbar .container {
@@ -41,7 +46,6 @@ header .navbar .container ul li {
 }
 
 header .navbar .container ul li a {
-  color: #000;
   text-transform: uppercase;
   color: #3d3d3d;
   font-size: .7em;
@@ -50,10 +54,6 @@ header .navbar .container ul li a {
 /* Fine regole generali */
 
 /* Regole logo */
-
-header .navbar .container .logo {
-  max-width: 100%;
-}
 
 header .navbar .container .logo img {
   vertical-align: middle;
@@ -81,7 +81,7 @@ header .navbar .container .languages {
 /* Regole lingue */
 header .navbar .container .languages ul li {
   border-right: 1px solid #3d3d3d;
-  padding: 0 4px;
+  padding: 0 3px;
 }
 
 header .navbar .container .languages ul li:last-child {
@@ -185,10 +185,9 @@ section.wrapper-items .container .items .item .item-image img {
 
 section.how-work {
   background-image: url('../img/HelbizBanner.jpg');
-  background-size: 100%;
+  background-size: 100% 60%;
   background-repeat: no-repeat;
-  width: 100%
-  height: 702px;
+  /* width: 100%; */
 }
 
 section.how-work .container .title,
@@ -216,11 +215,11 @@ section.how-work .container .image img {
 
 /* Inizio regole info */
 
-section.info {
+section.info .container {
   padding: 0 4%;
 }
 
-section.info .container {
+section.info .container .wrapper-info {
   background-image: url('../img/ScooterHelbiz-2400.jpg');
   height: 398px;
   background-size: cover;
@@ -286,7 +285,7 @@ section.app-find .container .app-find a {
 }
 
 section.app-find .container .app-find .app img {
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -307,10 +306,10 @@ section.app-find .container .app-find .find {
 
 /* Inizio regole sezione social */
 
-section.social .container {
+section.social {
   background-image: url('../img/Social-Banner.jpg');
   height: 265px;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   margin-bottom: 20px;
@@ -318,7 +317,7 @@ section.social .container {
 
 section.social .container .social-link {
   background: #fff;
-  width: 35%;
+  width: 25%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -346,6 +345,75 @@ section.social .container .social-link ul li a {
 
 /* REGOLE FOOTER */
 
+footer {
+  background: #000;
+  padding: 5% 0 5% 10%;
+  font-size: .8em;
+}
+
+footer .wrapper-footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer a {
+  text-transform: capitalize;
+}
+
+footer .footer-top,
+footer .footer-middle {
+  margin-bottom: 6%;
+}
+
+/* Inizio regole footer top */
+
+footer .footer-top h3 {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+footer .footer-top ul li {
+  padding: 4% 0;
+}
+
+footer .footer-top a {
+  color: #696969;
+}
+
+/* Fine regole footer top */
+
+/* Inizio regole footer middle */
+
+footer .footer-middle {
+  border-top: 1px solid #3d3d3d;
+  border-bottom: 1px solid #3d3d3d;
+  padding: 4% 0;
+}
+
+footer .footer-middle ul li {
+  display: inline-block;
+  padding-right: 4%;
+  font-size: 1.5em;
+}
+
+footer .footer-middle ul li:last-child {
+  padding-right: 0;
+}
+
+footer .footer-middle a {
+  color: #fff;
+}
+
+/* Fine regole footer middle */
+
+/* Inizio regole footer bottom */
+
+footer .footer-bottom .col-lg-6:first-child {
+  text-align: right;
+}
+
+/* Fine regole footer bottom */
+
 /* FINE REGOLE FOOTER */
 
 /* MEDIAQUERYS */
@@ -364,8 +432,8 @@ section.social .container .social-link ul li a {
   }
 
   header .jumbotron {
-    background-position: bottom;
-    height: 200px;
+    background-position: left;
+    height: 50vh;
     font-size: .7em;
   }
 
@@ -387,13 +455,17 @@ section.social .container .social-link ul li a {
     margin-bottom: 20px;
   }
 
-  section.wrapper-items .container .items .item .item-image img {
-    height: auto;
-    width: 30%;
+  section.how-work {
+    margin-bottom: 20px;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
   }
 
-  section.how-work {
-    margin-bottom: 1%;
+  section.how-work .container {
+    position: absolute;
+    top: 10px;
+    left: 0;
   }
 
   section.how-work .container .title,
@@ -417,16 +489,20 @@ section.social .container .social-link ul li a {
   }
 
   section.info .container {
-    background-position: left;
+    margin-bottom: 20px;
+  }
+
+  section.info .container,
+  section.app-find .container {
+    padding: 0;
+  }
+
+  section.info .container .wrapper-info {
+    background-position: center;
   }
 
   section.info .container .info-teaser  {
     font-size: .8em;
-    padding: 0;
-    top: 85%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    color: #000;
   }
 
   section.info .container .info-teaser h2 {
@@ -444,8 +520,40 @@ section.social .container .social-link ul li a {
     font-size: .8em;
   }
 
+  section.app-find .container .app-find .app img {
+    margin-top: 20px;
+  }
+
+  section.social .container {
+    background-size: cover;
+  }
+
   section.social .container .social-link {
+    width: 90%;
+    padding: 0;
     display: inline-block;
+  }
+
+  footer {
+    padding: 5% 0;
+  }
+
+  footer .footer-top img,
+  footer .footer-middle ul li {
+    margin-bottom: 4%;
+  }
+
+  footer .footer-top ul li {
+    padding: 2% 0;
+  }
+
+  footer .footer-middle a {
+    display: block;
+    margin-bottom: 2%;
+  }
+
+  footer .footer-bottom img {
+    padding: 0 2%;
   }
 
 }
@@ -461,11 +569,6 @@ section.social .container .social-link ul li a {
     display: block;
     font-size: 1.4em;
     text-align: center;
-  }
-
-  header .jumbotron {
-    background-position: bottom;
-    height: 300px;
   }
 
   header .jumbotron .teaser .store .apple img,
@@ -496,10 +599,6 @@ section.social .container .social-link ul li a {
     width: 60%;
   }
 
-  section.info .container {
-    height: 200px;
-  }
-
   section.info .container .info-teaser {
     width: 30%;
     padding: 0 2%;
@@ -508,7 +607,6 @@ section.social .container .social-link ul li a {
 
   section.app-find .container .app-find .app,
   section.app-find .container .app-find .find {
-    height: 200px;
     font-size: .7em;
   }
 
@@ -525,6 +623,20 @@ section.social .container .social-link ul li a {
     padding: 1%;
     font-size: .7em;
   }
+
+  footer .footer-top img,
+  footer .footer-middle ul li {
+    margin-bottom: 4%;
+  }
+  footer .footer-middle a {
+    display: block;
+    margin-bottom: 4%;
+  }
+
+  footer .footer-bottom img {
+    padding: 0 2%;
+  }
+
 }
 
 @media all and (min-width: 992px) {
