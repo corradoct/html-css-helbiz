@@ -91,6 +91,37 @@ header .navbar .container .languages ul li:last-child {
 
 /* Fine regole lingue */
 
+/* INIZIO MEDIAQUERYS HEADER NAVBAR */
+
+@media all and (max-width: 768px){
+
+  header .navbar .container .logo {
+    text-align: center;
+  }
+
+  header .navbar .container nav .burger-menu,
+  header .navbar .container .languages .xs-languages {
+    display: block;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  header .navbar .container .logo,
+  header .navbar .container .languages {
+    text-align: center;
+  }
+
+  header .navbar .container nav .burger-menu {
+    display: block;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+/* FINE MEDIAQUERYS HEADER NAVBAR */
+
 /* Regole jumbotron */
 
 header .jumbotron {
@@ -137,9 +168,37 @@ header .jumbotron .teaser .store .google {
 
 /* Fine regole teaser */
 
+/* INIZIO MEDIAQUERYS HEADER JUMBOTRON */
+
+@media all and (max-width: 768px) {
+  header .jumbotron {
+    background-position: left;
+    height: 50vh;
+    font-size: .7em;
+  }
+
+  header .jumbotron .teaser .store .apple,
+  header .jumbotron .teaser .store .google {
+    width: 100%;
+  }
+
+  header .jumbotron .teaser a img {
+    width: 30%;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  header .jumbotron .teaser .store .apple img,
+  header .jumbotron .teaser .store .google img {
+    width: 70%;
+  }
+}
+
+/* FINE MEDIAQUERYS HEADER JUMBOTRON */
+
 /* FINE REGOLE HEADER */
 
-/* REGOLE MAIN */
+/* INIZIO REGOLE MAIN */
 
 /* Inizio regole prodotti */
 
@@ -181,6 +240,31 @@ section.wrapper-items .container .items .item .item-image img {
 }
 /* Fine regole prodotti */
 
+/* INIZIO MEDIAQUERYS SEZIONE PRODOTTI */
+
+@media all and (max-width: 768px) {
+  section.wrapper-items .container .items .item {
+    width: 100%;
+    font-size: .7em;
+  }
+
+  section.wrapper-items .container .items .item:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  section.wrapper-items .container .items .item {
+    max-width: 50%;
+  }
+
+  section.wrapper-items .container .items .item .item-text {
+    font-size: .7em;
+  }
+}
+
+/* FINE MEDIAQUERYS SEZIONE PRODOTTI */
+
 /* Inizio regole how work */
 
 section.how-work {
@@ -210,6 +294,62 @@ section.how-work .container .image {
 section.how-work .container .image img {
   max-width: 100%;
 }
+
+/* INIZIO MEDIAQUERYS SEZIONE HOW WORK */
+
+@media all and (max-width: 768px) {
+  section.how-work {
+    margin-bottom: 20px;
+    background-size: cover;
+    height: 30vh;
+    position: relative;
+  }
+
+  section.how-work .container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+  }
+
+  section.how-work .container .title,
+  section.how-work .container .step {
+    width: 100%;
+    padding: 4% 0 0 0;
+    text-align: center;
+  }
+
+  section.how-work .container .title h2 {
+    font-size: 1em;
+  }
+
+  section.how-work .container .step h4 {
+    padding: 0;
+    font-size: .9em;
+  }
+
+  section.how-work .container .step p {
+    padding-bottom: 10%;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  section.how-work .container .image {
+    padding-top: 8%;
+    text-align: center;
+  }
+
+  section.how-work .container .title,
+  section.how-work .container .step {
+    padding: 30% 0 0 0;
+    font-size: .8em;
+  }
+
+  section.how-work .container .image img {
+    width: 60%;
+  }
+}
+
+/* FINE MEDIAQUERYS SEZIONE HOW WORK */
 
 /* Fine regole how work */
 
@@ -251,6 +391,45 @@ section.info .container .info-teaser p {
 section.info .container .info-teaser a {
   color: #fff;
 }
+
+/* INIZIO MEDIAQUERYS SEZIONE INFO */
+
+@media all and (max-width: 768px) {
+  section.info .container {
+    margin-bottom: 20px;
+  }
+
+  section.info .container,
+  section.app-find .container {
+    padding: 0;
+  }
+
+  section.info .container .wrapper-info {
+    background-position: center;
+  }
+
+  section.info .container .info-teaser  {
+    font-size: .8em;
+  }
+
+  section.info .container .info-teaser h2 {
+    font-size: 1.5em;
+  }
+
+  section.info .container .info-teaser p {
+    padding: 0;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  section.info .container .info-teaser {
+    width: 30%;
+    padding: 0 2%;
+    font-size: .7em;
+  }
+}
+
+/* FINE MEDIAQUERYS SEZIONE INFO */
 
 /* Fine regole info */
 
@@ -302,6 +481,34 @@ section.app-find .container .app-find .find {
   background-repeat: no-repeat;
 }
 
+/* INIZIO MEDIAQUERYS SEZIONE APP-FIND */
+
+@media all and (max-width: 768px) {
+  section.app-find .container .app-find .app,
+  section.app-find .container .app-find .find {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: .8em;
+  }
+
+  section.app-find .container .app-find .app img {
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  section.app-find .container .app-find .app,
+  section.app-find .container .app-find .find {
+    font-size: .7em;
+  }
+
+  section.app-find .container .app-find .app img {
+    top: 90%;
+  }
+}
+
+/* FINE MEDIAQUERYS SEZIONE APP-FIND */
+
 /* Fine regole app e find */
 
 /* Inizio regole sezione social */
@@ -339,6 +546,35 @@ section.social .container .social-link ul li:last-child {
 section.social .container .social-link ul li a {
   color: #000;
 }
+
+/* INIZIO MEDIAQUERYS SEZIONE SOCIAL */
+
+@media all and (max-width: 768px) {
+  section.social .container {
+    background-size: cover;
+  }
+
+  section.social .container .social-link {
+    width: 90%;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+@media all and (min-width: 769px) and (max-width: 991px) {
+  section.social .container {
+    height: 200px;
+  }
+
+  section.social .container .social-link {
+    width: 20%;
+    padding: 1%;
+    font-size: .7em;
+  }
+}
+
+/* FINE MEDIAQUERYS SEZIONE SOCIAL */
+
 /* Fine regole sezione social */
 
 /* FINE REGOLE MAIN */
@@ -414,126 +650,9 @@ footer .footer-bottom .col-lg-6:first-child {
 
 /* Fine regole footer bottom */
 
-/* FINE REGOLE FOOTER */
+/* INIZIO MEDIAQUERYS FOOTER */
 
-/* MEDIAQUERYS */
-
-@media all and (max-width: 768px){
-
-  header .navbar .container .logo {
-    text-align: center;
-  }
-
-  header .navbar .container nav .burger-menu,
-  header .navbar .container .languages .xs-languages {
-    display: block;
-    font-size: 1.4em;
-    text-align: center;
-  }
-
-  header .jumbotron {
-    background-position: left;
-    height: 50vh;
-    font-size: .7em;
-  }
-
-  header .jumbotron .teaser .store .apple,
-  header .jumbotron .teaser .store .google {
-    width: 100%;
-  }
-
-  header .jumbotron .teaser a img {
-    width: 30%;
-  }
-
-  section.wrapper-items .container .items .item {
-    width: 100%;
-    font-size: .7em;
-  }
-
-  section.wrapper-items .container .items .item:first-child {
-    margin-bottom: 20px;
-  }
-
-  section.how-work {
-    margin-bottom: 20px;
-    background-size: cover;
-    height: 30vh;
-    position: relative;
-  }
-
-  section.how-work .container {
-    position: absolute;
-    top: 10px;
-    left: 0;
-  }
-
-  section.how-work .container .title,
-  section.how-work .container .step {
-    width: 100%;
-    padding: 4% 0 0 0;
-    text-align: center;
-  }
-
-  section.how-work .container .title h2 {
-    font-size: 1em;
-  }
-
-  section.how-work .container .step h4 {
-    padding: 0;
-    font-size: .9em;
-  }
-
-  section.how-work .container .step p {
-    padding-bottom: 10%;
-  }
-
-  section.info .container {
-    margin-bottom: 20px;
-  }
-
-  section.info .container,
-  section.app-find .container {
-    padding: 0;
-  }
-
-  section.info .container .wrapper-info {
-    background-position: center;
-  }
-
-  section.info .container .info-teaser  {
-    font-size: .8em;
-  }
-
-  section.info .container .info-teaser h2 {
-    font-size: 1.5em;
-  }
-
-  section.info .container .info-teaser p {
-    padding: 0;
-  }
-
-  section.app-find .container .app-find .app,
-  section.app-find .container .app-find .find {
-    width: 100%;
-    margin-bottom: 20px;
-    font-size: .8em;
-  }
-
-  section.app-find .container .app-find .app img {
-    margin-top: 20px;
-  }
-
-  section.social .container {
-    background-size: cover;
-  }
-
-  section.social .container .social-link {
-    width: 90%;
-    padding: 0;
-    display: inline-block;
-  }
-
+@media all and (max-width: 768px) {
   footer {
     padding: 5% 0;
   }
@@ -555,79 +674,14 @@ footer .footer-bottom .col-lg-6:first-child {
   footer .footer-bottom img {
     padding: 0 2%;
   }
-
 }
 
 @media all and (min-width: 769px) and (max-width: 991px) {
-
-  header .navbar .container .logo,
-  header .navbar .container .languages {
-    text-align: center;
-  }
-
-  header .navbar .container nav .burger-menu {
-    display: block;
-    font-size: 1.4em;
-    text-align: center;
-  }
-
-  header .jumbotron .teaser .store .apple img,
-  header .jumbotron .teaser .store .google img {
-    width: 70%;
-  }
-
-  section.wrapper-items .container .items .item {
-    max-width: 50%;
-  }
-
-  section.wrapper-items .container .items .item .item-text {
-    font-size: .7em;
-  }
-
-  section.how-work .container .image {
-    padding-top: 8%;
-    text-align: center;
-  }
-
-  section.how-work .container .title,
-  section.how-work .container .step {
-    padding: 30% 0 0 0;
-    font-size: .8em;
-  }
-
-  section.how-work .container .image img {
-    width: 60%;
-  }
-
-  section.info .container .info-teaser {
-    width: 30%;
-    padding: 0 2%;
-    font-size: .7em;
-  }
-
-  section.app-find .container .app-find .app,
-  section.app-find .container .app-find .find {
-    font-size: .7em;
-  }
-
-  section.app-find .container .app-find .app img {
-    top: 90%;
-  }
-
-  section.social .container {
-    height: 200px;
-  }
-
-  section.social .container .social-link {
-    width: 20%;
-    padding: 1%;
-    font-size: .7em;
-  }
-
   footer .footer-top img,
   footer .footer-middle ul li {
     margin-bottom: 4%;
   }
+
   footer .footer-middle a {
     display: block;
     margin-bottom: 4%;
@@ -636,11 +690,8 @@ footer .footer-bottom .col-lg-6:first-child {
   footer .footer-bottom img {
     padding: 0 2%;
   }
-
 }
 
-@media all and (min-width: 992px) {
+/* FINE MEDIAQUERYS FOOTER */
 
-}
-
-/* FINE MEDIAQUERYS */
+/* FINE REGOLE FOOTER */
